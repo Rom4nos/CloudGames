@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cloud Games</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" href="images/nuuvem.svg">
+		<script src="cart.js" async></script>
+	</head>
+	<header>
+		<nav>
+			<div class="game-icon">
+				<img src="images/nuuvem.svg" alt="Game Control Icon">
+			</div>
+			<a href="cart.html"><img src="carts.png" width="35px" heigth="35px"> </a>
+			<a class="active" href="index.html">Home</a>
+			<a href="about.html">About Us</a>
+		</nav>
+	</header>
+	<body>
+		<!-- <script>
+		const buyButton = document.getElementById('buy-button');
+		buyButton.addEventListener('click', addToCart);
+		let cartTotal = 0;
+		const cartTotalElement = document.getElementById('cart-total');
+		function addToCart(event) {
+		const price = parseFloat(event.target.dataset.price);
+		cartTotal += price;
+		cartTotalElement.textContent = `$${cartTotal.toFixed(2)}`;
+		}
+		</script> -->
+		<div class="slideshow">
+			<div class="slideshow-images">
+				<img src="images/MK11.jpeg" alt="Image 1">
+				<img src="images/Cuphead.jpeg" alt="Image 2">
+				<img src="images/PubG.jpeg" alt="Image 3">
+				<img src="images/RL.jpeg" alt="Image 4">
+				<img src="images/CSGO.jpeg" alt="Image 5">
+				<img src="images/R6.jpeg" alt="Image 6">
+			</div>
+			<div class="slideshow-info">
+				<h2>Title 1</h2>
+				<p>Description 1</p>
+				  <div class="slideshow-controls">
+					<button id="prev-btn">
+						<span>&#8249;</span>
+					</button>
+					<button id="next-btn">
+						<span>&#8250;</span>
+					</button>
+				  </div>
+				 
+<script>
+	const slideshowImages = document.querySelectorAll('.slideshow-images img');
+	const slideshowInfo = document.querySelector('.slideshow-info');
+	const prevButton = document.querySelector('#prev-btn');
+	const nextButton = document.querySelector('#next-btn');
+	const titles = ['Mortal Kombat', 'Cup Head', 'PUBG', 'Rocket League', 'Counter-Strike', 'Rainbow Six'];
+	const descriptions = [
+	  'Mortal Kombat is back, better than ever, in an evolution of the iconic franchise.',
+	  'Cuphead is a classic run and gun action game heavily focused on boss battles. Inspired by cartoons of the 1930s',
+	  'PUBG is a player versus player shooter game in which up to one hundred players fight in a battle royale',
+	  'Rocket League is a fantastical sport-based video game, developed by Psyonix (its soccer with cars).',
+	  'The game pits two teams, Terrorists and Counter-Terrorists, against each other in different objective-based game modes.',
+	  'Rainbow Six Siege is a high-precision, tactical shooter that prioritises careful planning teamwork and finely tuned tactical play.'
+	];
+	let currentImage = 0;
+  
+	function showImage(index) {
+	  slideshowImages.forEach((image) => {
+		image.style.display = 'none';
+	  });
+	  slideshowImages[index].style.display = 'block';
+  
+	  slideshowInfo.querySelector('h2').textContent = titles[index];
+	  slideshowInfo.querySelector('p').textContent = descriptions[index];
+	}
+  
+	showImage(currentImage);
+  
+	prevButton.addEventListener('click', () => {
+	  currentImage--;
+	  if (currentImage < 0) {
+		currentImage = slideshowImages.length - 1;
+	  }
+	  showImage(currentImage);
+	});
+  
+	nextButton.addEventListener('click', () => {
+	  currentImage++;
+	  if (currentImage >= slideshowImages.length) {
+		currentImage = 0;
+	  }
+	  showImage(currentImage);
+	});
+  </script>
+			</div>
+		</div>
+		<div class="game-row">
+			<div class="game-box">
+				<div class="game-image">
+					<img src="images/game1.jpeg" alt="Game Name">
+				</div>
+				<div class="game-info">
+					<h2>Mortal Kombat</h2>
+					<div class="icons">
+						<img src="icons/windows.png" heigth="33px" width="33px" alt="Windows
+							icon">
+						<img src="icons/steam.png" heigth="30px" width="30px" alt="Steam icon"></div>
+					<!-- <button id="buy-button" data-price="19.99"><a href="#" class="buy-button">$19.99</a> -->
+					<button class="buy-button" data-price="19.99">
+						<span>$19.99</span>
+					</button>
+				</div>
+			</div>
+			<div class="game-box">
+				<div class="game-image">
+					<img src="images/game2.jpg" alt="Game 2">
+				</div>
+				<div class="game-info">
+					<h2>Cup Head</h2>
+					<div class="icons">
+						<img src="icons/windows.png" heigth="33px" width="33px" alt="Windows
+							icon">
+						<img src="icons/steam.png" heigth="30px" width="30px" alt="Steam icon"></div>
+					<!-- <button id="buy-button" data-price="39.99"> -->
+					<!-- <a href="#" class="buy-button">$39.99</a> -->
+					<button class="buy-button" data-price="39.99">
+						<span>$39.99</span>
+					</button>
+				</div>
+			</div>
+			<div class="game-box">
+				<div class="game-image">
+					<img src="images/game3.jpeg" alt="Game 3">
+				</div>
+				<div class="game-info">
+					<h2>Pubg</h2>
+					<div class="icons">
+						<img src="icons/windows.png" heigth="33px" width="33px" alt="Windows
+							icon">
+						<img src="icons/steam.png" heigth="30px" width="30px" alt="Steam icon"></div>
+					<!-- <button id="buy-button" data-price="24.99"> -->
+					<!-- <a href="#" class="buy-button">$24.99</a> -->
+					<button class="buy-button" data-price="24.99">
+						<span>$24.99</span>
+					</button>
+				</div>
+			</div>
+			<div class="game-box">
+				<div class="game-image">
+					<img src="images/game4.jpeg" alt="Game 4">
+				</div>
+				<div class="game-info">
+					<h2>Rocket League</h2>
+					<div class="icons">
+						<img src="icons/windows.png" heigth="33px" width="33px" alt="Windows
+							icon">
+						<img src="icons/steam.png" heigth="30px" width="30px" alt="Steam icon"></div>
+					<!-- <button id="buy-button" data-price="19.99"> -->
+					<!-- <a href="#" data-price="19.99" class="buy-button">$19.99</a> -->
+					<button class="buy-button" data-price="44.99">
+						<span>$44.99</span>
+					</button>
+				</div>
+			</div>
+			<div class="game-box">
+				<div class="game-image">
+					<img src="images/game5.jpeg" alt="Game 5">
+				</div>
+				<div class="game-info">
+					<h2>Counter Strike</h2>
+					<div class="icons">
+						<img src="icons/windows.png" heigth="33px" width="33px" alt="Windows
+							icon">
+						<img src="icons/steam.png" heigth="30px" width="30px" alt="Steam icon"></div>
+					<!-- <button id="buy-button" data-price="14.99"> -->
+					<!-- <a href="#" class="buy-button">14.99$</a> -->
+					<button class="buy-button" data-price="14.99">
+						<span>14.99$</span>
+					</button>
+				</div>
+			</div>
+			<div class="game-box">
+				<div class="game-image">
+					<img src="images/game6.jpeg" alt="Game 6">
+				</div>
+				<div class="game-info">
+					<h2>Rainbow Six Siege</h2>
+					<div class="icons">
+						<img src="icons/windows.png" heigth="33px" width="33px" alt="Windows
+							icon">
+						<img src="icons/steam.png" heigth="30px" width="30px" alt="Steam icon"></div>
+					<!-- <button id="buy-button" data-price="44.99"> -->
+					<!-- <a href="#" class="buy-button">$44.99</a> -->
+					<button class="buy-button" data-price="44.90">
+						<span>$44.99</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
+			<footer>
+				<div class="fcontent">
+					<h3> Cloud Games </h3>
+					<p>Some more information about our Website, enjoy it.</p>
+					<ul class="socials">
+						<li><a href="https://www.instagram.com/"><img src="images/insta.png" heigth="33px" width="33px" alt="Windowsicon"></a></li>
+						<li><a href="https://www.facebook.com/"><img src="images/face.webp" heigth="33px" width="33px" alt="Windowsicon"></a></li>
+						<li><a href="https://www.youtube.com/"><img src="images/yt.svg" heigth="33px" width="33px" alt="Windowsicon"></a></li>
+						<li><a href="mailto:CloudGames@gmail.com">CloudGames@gmail.com</a></li>
+					</ul>
+				</div>
+				<div class="fbottom">
+				<p>copyrigth &copy; 2023 Cloud Games. Designed by Mateus Romanos.</p>  
+			</div>
+	</footer>
+</html>
